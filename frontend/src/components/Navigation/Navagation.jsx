@@ -12,7 +12,7 @@ function Navigation({active, setActive}) {
                 <img src={avatar} alt="" />
                 <div className="text">
                     <h2>Ampie</h2>
-                    <p>Your Money</p>
+                    <p>Vannes Plus</p>
                 </div>
             </div>
             <ul className="menu-items">
@@ -37,8 +37,8 @@ function Navigation({active, setActive}) {
 }
 
 const NavStyled = styled.nav`
-    padding: 2rem 1.5rem;
-    width: 374px;
+    padding: 1rem 1.5rem;
+    width: 320px;
     height: 100%;
     background: rgba(252, 246, 249, 0.78);
     border: 3px solid #FFFFFF;
