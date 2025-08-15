@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e50f79c2-63d3-4305-8fde-86c1041b323c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/History/History.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/expenseModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/expenseModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/incomeModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/incomeModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chart/Chart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chart/Chart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Dashboard/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Dashboard/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Form/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Form/Form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/context/GlobalContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/context/GlobalContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,7 @@
       <updated>1755091817979</updated>
       <workItem from="1755091822919" duration="10970000" />
       <workItem from="1755153070782" duration="32524000" />
-      <workItem from="1755247346130" duration="27097000" />
+      <workItem from="1755247346130" duration="28413000" />
     </task>
     <servers />
   </component>
