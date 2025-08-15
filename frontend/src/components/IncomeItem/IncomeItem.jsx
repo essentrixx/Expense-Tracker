@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from "../../utils/Icons.jsx";
 import Button from "../Button/Button.jsx";
+import { dateFormat } from "../../utils/dateFormat.jsx";
 
 function IncomeItem({ id, title, amount, date, category, description, deleteItem, $indicatorcolor, type }) {
 
@@ -64,7 +65,7 @@ function IncomeItem({ id, title, amount, date, category, description, deleteItem
                 <div className="inner-content">
                     <div className="text">
                         <p>{dollar} {amount}</p>
-                        <p>{calender} {date}</p>
+                        <p>{calender} {dateFormat(date)}</p>
                         <p>
                             {comment}
                             {description}
@@ -103,8 +104,8 @@ const IncomeStyled = styled.div
         width: 100%;
         color: #222260;
         .icon{
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             border-radius: 20px;
             background: #F5F5F5;
             display: flex;

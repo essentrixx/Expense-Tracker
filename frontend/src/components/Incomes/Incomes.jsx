@@ -15,7 +15,7 @@ function Income() {
     return (
         <IncomeStyled>
             <InnerLayout>
-                <h1>Incomes</h1>
+                <h1>Vanness Incomes</h1>
                 <h2 className="total-income">Total Income: <span>${totalIncome()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">
@@ -63,7 +63,7 @@ const IncomeStyled = styled.div
             gap: .5rem;
             span{
                 font-size: 2rem;
-                padding-left: 10px;
+                padding-left: 2px;
                 font-weight: 600;
                 color: var(--color-green);
             }
