@@ -9,15 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
-app.use(
-    cors({
-        origin: [
-            'https://simple-expensive-tracker-klna.onrender.com', // Render frontend
-            'http://localhost:5173' // local dev frontend
-        ]
-    })
-);
-
+app.use(cors({ origin: 'https://simple-expensive-trackers.onrender.com' }));
 
 // routes
 readdirSync("./routes").map(route => app.use("/api/v1", require("./routes/" + route)));
@@ -26,9 +18,5 @@ readdirSync("./routes").map(route => app.use("/api/v1", require("./routes/" + ro
 connectDB()
     .then(() => console.log("Connected to DB"))
     .catch(err => console.error(err));
-
-app.get("/", (req, res) => {
-    res.send("index");
-})
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
