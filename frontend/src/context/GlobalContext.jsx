@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 
-const baseUrl = "http://localhost:3000/api/v1";
+// Change this to your Render backend URL
+const baseUrl = import.meta.env.VITE_API_URL;
 const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {

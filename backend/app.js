@@ -9,7 +9,15 @@ const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+    cors({
+        origin: [
+            'https://simple-expensive-tracker-klna.onrender.com', // Render frontend
+            'http://localhost:5173' // local dev frontend
+        ]
+    })
+);
+
 
 // routes
 readdirSync("./routes").map(route => app.use("/api/v1", require("./routes/" + route)));
