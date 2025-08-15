@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 
 // Change this to your Render backend URL
-const baseUrl = "https://simpleexpensivetracker.onrender.com/api/v1";
+const baseUrl = import.meta.env.VITE_API_URL;
 const GlobalContext = React.createContext();
 
 export const GlobalProvider = ({ children }) => {
