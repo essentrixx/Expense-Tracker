@@ -5,51 +5,57 @@ import styled from "styled-components";
 import { useGlobalContext } from "../../context/GlobalContext.jsx";
 import { dateFormat } from "../../utils/dateFormat.jsx";
 
-ChartJs.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement);
+ChartJs.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    ArcElement,
+)
 
 function Chart() {
-    const { incomes, expenses } = useGlobalContext();
+    const {incomes, expenses} = useGlobalContext()
 
     const data = {
-        labels: incomes.map((inc) => dateFormat(inc.date)),
+        labels: incomes.map((inc) =>{
+            const {date} = inc
+            return dateFormat(date)
+        }),
         datasets: [
             {
                 label: 'Income',
-                data: incomes.map((income) => income.amount),
-                borderColor: 'green',
+                data: [
+                    ...incomes.map((income) => {
+                        const {amount} = income
+                        return amount
+                    })
+                ],
                 backgroundColor: 'green',
-                tension: 0.2,
-                fill: false,
+                tension: .2
             },
             {
                 label: 'Expenses',
-                data: expenses.map((expense) => expense.amount),
-                borderColor: 'red',
+                data: [
+                    ...expenses.map((expense) => {
+                        const {amount} = expense
+                        return amount
+                    })
+                ],
                 backgroundColor: 'red',
-                tension: 0.2,
-                fill: false,
+                tension: .2
             }
         ]
-    };
+    }
 
-    const options = {
-        responsive: true,
-        plugins: {
-            // legend: {
-            //     position: 'top',
-            // },
-            // title: {
-            //     display: true,
-            //     text: 'Income vs Expenses',
-            // },
-        },
-    };
 
     return (
-        <ChartStyled>
-            <Line data={data} options={options} />
+        <ChartStyled >
+            <Line data={data} />
         </ChartStyled>
-    );
+    )
 }
 
 const ChartStyled = styled.div`
@@ -61,4 +67,4 @@ const ChartStyled = styled.div`
     height: 100%;
 `;
 
-export default Chart;
+export default Chart

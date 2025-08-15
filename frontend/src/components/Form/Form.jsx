@@ -7,7 +7,7 @@ import { plus } from "../../utils/Icons.jsx";
 import Button from "../Button/Button.jsx";
 
 function Form() {
-    const { addIncome, getIncomes } = useGlobalContext();
+    const { addIncome, getIncomes, error, setError } = useGlobalContext();
 
     const [input, setInput] = useState({
         title: "",
@@ -31,7 +31,7 @@ function Form() {
 
         // Frontend validation
         if (!title || !amount || !date || !category || !description) {
-            alert("Please fill in all fields.");
+            setError("All fields are required");
             return;
         }
 
@@ -53,10 +53,13 @@ function Form() {
             category: "",
             description: "",
         });
+
+        setError("");
     }
 
     return (
         <FormStyled onSubmit={handleSubmit}>
+            {error && <p className="error">{error}</p>}
             <div className="input-control">
                 <input
                     type="text"
